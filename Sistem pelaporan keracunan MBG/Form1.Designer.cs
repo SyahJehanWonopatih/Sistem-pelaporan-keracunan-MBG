@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSelanjutnya = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxNamaLengkap = new System.Windows.Forms.TextBox();
+            this.txtBoxNomorKontak = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxKotaKab = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLoginAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonSelanjutnya
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(544, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Selanjutnya";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSelanjutnya.BackColor = System.Drawing.Color.Silver;
+            this.buttonSelanjutnya.Location = new System.Drawing.Point(544, 399);
+            this.buttonSelanjutnya.Name = "buttonSelanjutnya";
+            this.buttonSelanjutnya.Size = new System.Drawing.Size(75, 23);
+            this.buttonSelanjutnya.TabIndex = 0;
+            this.buttonSelanjutnya.Text = "Selanjutnya";
+            this.buttonSelanjutnya.UseVisualStyleBackColor = false;
+            this.buttonSelanjutnya.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -59,6 +60,7 @@
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nama Lengkap";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -69,24 +71,27 @@
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nomor Kontak";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtBoxNamaLengkap
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(164, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtBoxNamaLengkap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBoxNamaLengkap.ForeColor = System.Drawing.Color.White;
+            this.txtBoxNamaLengkap.Location = new System.Drawing.Point(164, 154);
+            this.txtBoxNamaLengkap.Name = "txtBoxNamaLengkap";
+            this.txtBoxNamaLengkap.Size = new System.Drawing.Size(326, 20);
+            this.txtBoxNamaLengkap.TabIndex = 6;
+            this.txtBoxNamaLengkap.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtBoxNomorKontak
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(164, 218);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtBoxNomorKontak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBoxNomorKontak.ForeColor = System.Drawing.Color.White;
+            this.txtBoxNomorKontak.Location = new System.Drawing.Point(164, 218);
+            this.txtBoxNomorKontak.Name = "txtBoxNomorKontak";
+            this.txtBoxNomorKontak.Size = new System.Drawing.Size(326, 20);
+            this.txtBoxNomorKontak.TabIndex = 7;
+            this.txtBoxNomorKontak.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -110,16 +115,25 @@
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Kota/Kab";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // comboBox1
+            // comboBoxKotaKab
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(164, 276);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(326, 21);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxKotaKab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBoxKotaKab.ForeColor = System.Drawing.Color.White;
+            this.comboBoxKotaKab.FormattingEnabled = true;
+            this.comboBoxKotaKab.Items.AddRange(new object[] {
+            "Manado",
+            "Sleman ",
+            "Bantul",
+            "Kotamobagu",
+            "Bandung",
+            "Jakarta"});
+            this.comboBoxKotaKab.Location = new System.Drawing.Point(164, 276);
+            this.comboBoxKotaKab.Name = "comboBoxKotaKab";
+            this.comboBoxKotaKab.Size = new System.Drawing.Size(326, 21);
+            this.comboBoxKotaKab.TabIndex = 13;
+            this.comboBoxKotaKab.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -132,15 +146,16 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Sistem pelaporan MBG";
             // 
-            // button2
+            // buttonLoginAdmin
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(564, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 32);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Login Admin";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonLoginAdmin.BackColor = System.Drawing.Color.Silver;
+            this.buttonLoginAdmin.Location = new System.Drawing.Point(564, 12);
+            this.buttonLoginAdmin.Name = "buttonLoginAdmin";
+            this.buttonLoginAdmin.Size = new System.Drawing.Size(113, 32);
+            this.buttonLoginAdmin.TabIndex = 16;
+            this.buttonLoginAdmin.Text = "Login Admin";
+            this.buttonLoginAdmin.UseVisualStyleBackColor = false;
+            this.buttonLoginAdmin.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -149,18 +164,19 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(689, 490);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonLoginAdmin);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxKotaKab);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxNomorKontak);
+            this.Controls.Add(this.txtBoxNamaLengkap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonSelanjutnya);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,16 +184,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSelanjutnya;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxNamaLengkap;
+        private System.Windows.Forms.TextBox txtBoxNomorKontak;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxKotaKab;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLoginAdmin;
     }
 }
 

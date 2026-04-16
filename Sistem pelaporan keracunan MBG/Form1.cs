@@ -24,12 +24,66 @@ namespace Sistem_pelaporan_keracunan_MBG
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBoxNamaLengkap.Text) || string.IsNullOrEmpty(txtBoxNomorKontak.Text) || comboBoxKotaKab.SelectedIndex == -1)
+            {
+                MessageBox.Show("Waduh cik, isi dulu semua datanya!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Form2 formKejadian = new Form2();
+
+            
+
+            formKejadian.Show();
+            this.Hide(); 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 login = new Form4();
+            login.ShowDialog();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

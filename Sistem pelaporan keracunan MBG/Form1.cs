@@ -24,7 +24,11 @@ namespace Sistem_pelaporan_keracunan_MBG
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            comboBoxKotaKab.Items.Add("Manado");
+            comboBoxKotaKab.Items.Add("Kota Yogyakarta");
+            comboBoxKotaKab.Items.Add("sleman");
+            comboBoxKotaKab.Items.Add("Bandung");
+            comboBoxKotaKab.Items.Add("Jakarta");
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -64,7 +68,6 @@ namespace Sistem_pelaporan_keracunan_MBG
                 MessageBox.Show("Waduh cik, isi dulu semua datanya!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             Form2 formKejadian = new Form2();
 
             

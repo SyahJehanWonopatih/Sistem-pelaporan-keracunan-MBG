@@ -81,6 +81,7 @@ namespace Sistem_pelaporan_keracunan_MBG
         {
             Form4 login = new Form4();
             login.ShowDialog();
+            this.Hide();
 
         }
 

@@ -16,5 +16,18 @@ namespace Sistem_pelaporan_keracunan_MBG
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Apakah anda yakin ingin keluar dari Dashboard Admin?",
+                          "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialog == DialogResult.Yes)
+            {
+                Form1 halamanUtama = new Form1();
+                halamanUtama.Show();
+                this.Dispose();
+            }
+        }
     }
 }

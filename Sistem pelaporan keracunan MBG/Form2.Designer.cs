@@ -83,7 +83,7 @@
             // txtBoxLokasi
             // 
             this.txtBoxLokasi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBoxLokasi.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxLokasi.ForeColor = System.Drawing.Color.White;
             this.txtBoxLokasi.Location = new System.Drawing.Point(156, 164);
             this.txtBoxLokasi.Name = "txtBoxLokasi";
             this.txtBoxLokasi.Size = new System.Drawing.Size(326, 20);
@@ -92,7 +92,7 @@
             // txtBoxTanggal
             // 
             this.txtBoxTanggal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBoxTanggal.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxTanggal.ForeColor = System.Drawing.Color.White;
             this.txtBoxTanggal.Location = new System.Drawing.Point(156, 220);
             this.txtBoxTanggal.Name = "txtBoxTanggal";
             this.txtBoxTanggal.Size = new System.Drawing.Size(326, 20);

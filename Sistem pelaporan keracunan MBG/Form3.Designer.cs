@@ -31,11 +31,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKorban = new System.Windows.Forms.TextBox();
+            this.txtGejala = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKembali = new System.Windows.Forms.Button();
+            this.btnLaporan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label4
@@ -71,23 +71,25 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Deskripsi Gejala";
             // 
-            // textBox3
+            // txtKorban
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(186, 228);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(326, 20);
-            this.textBox3.TabIndex = 25;
+            this.txtKorban.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKorban.ForeColor = System.Drawing.Color.White;
+            this.txtKorban.Location = new System.Drawing.Point(186, 228);
+            this.txtKorban.Multiline = true;
+            this.txtKorban.Name = "txtKorban";
+            this.txtKorban.Size = new System.Drawing.Size(326, 20);
+            this.txtKorban.TabIndex = 25;
             // 
-            // textBox1
+            // txtGejala
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(186, 162);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 20);
-            this.textBox1.TabIndex = 26;
+            this.txtGejala.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtGejala.ForeColor = System.Drawing.Color.White;
+            this.txtGejala.Location = new System.Drawing.Point(186, 162);
+            this.txtGejala.Multiline = true;
+            this.txtGejala.Name = "txtGejala";
+            this.txtGejala.Size = new System.Drawing.Size(326, 20);
+            this.txtGejala.TabIndex = 26;
             // 
             // label6
             // 
@@ -99,25 +101,27 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Jumlah Korban";
             // 
-            // button2
+            // btnKembali
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(99, 363);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 28;
-            this.button2.Text = "Kembali";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnKembali.BackColor = System.Drawing.Color.Silver;
+            this.btnKembali.Location = new System.Drawing.Point(99, 363);
+            this.btnKembali.Name = "btnKembali";
+            this.btnKembali.Size = new System.Drawing.Size(75, 23);
+            this.btnKembali.TabIndex = 28;
+            this.btnKembali.Text = "Kembali";
+            this.btnKembali.UseVisualStyleBackColor = false;
+            this.btnKembali.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnLaporan
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(489, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Kirim Laporan";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLaporan.BackColor = System.Drawing.Color.Silver;
+            this.btnLaporan.Location = new System.Drawing.Point(489, 363);
+            this.btnLaporan.Name = "btnLaporan";
+            this.btnLaporan.Size = new System.Drawing.Size(95, 23);
+            this.btnLaporan.TabIndex = 29;
+            this.btnLaporan.Text = "Kirim Laporan";
+            this.btnLaporan.UseVisualStyleBackColor = false;
+            this.btnLaporan.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
@@ -125,11 +129,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(687, 487);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLaporan);
+            this.Controls.Add(this.btnKembali);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtGejala);
+            this.Controls.Add(this.txtKorban);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -146,10 +150,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKorban;
+        private System.Windows.Forms.TextBox txtGejala;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKembali;
+        private System.Windows.Forms.Button btnLaporan;
     }
 }

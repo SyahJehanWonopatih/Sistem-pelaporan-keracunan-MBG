@@ -25,5 +25,17 @@ namespace Sistem_pelaporan_keracunan_MBG
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = (Form2)Application.OpenForms["Form2"];
+            form2.Show();
+            this.Hide();
+        }
     }
 }

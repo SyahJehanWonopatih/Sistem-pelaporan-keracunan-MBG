@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxLokasi = new System.Windows.Forms.TextBox();
-            this.txtBoxTanggal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.dtpTanggal = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button1
@@ -89,15 +89,6 @@
             this.txtBoxLokasi.Size = new System.Drawing.Size(326, 20);
             this.txtBoxLokasi.TabIndex = 19;
             // 
-            // txtBoxTanggal
-            // 
-            this.txtBoxTanggal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBoxTanggal.ForeColor = System.Drawing.Color.White;
-            this.txtBoxTanggal.Location = new System.Drawing.Point(156, 220);
-            this.txtBoxTanggal.Name = "txtBoxTanggal";
-            this.txtBoxTanggal.Size = new System.Drawing.Size(326, 20);
-            this.txtBoxTanggal.TabIndex = 20;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -122,15 +113,23 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dtpTanggal
+            // 
+            this.dtpTanggal.Location = new System.Drawing.Point(156, 218);
+            this.dtpTanggal.Name = "dtpTanggal";
+            this.dtpTanggal.Size = new System.Drawing.Size(326, 20);
+            this.dtpTanggal.TabIndex = 23;
+            this.dtpTanggal.ValueChanged += new System.EventHandler(this.dtpTanggal_ValueChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(688, 488);
+            this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBoxTanggal);
             this.Controls.Add(this.txtBoxLokasi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -150,8 +149,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxLokasi;
-        private System.Windows.Forms.TextBox txtBoxTanggal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dtpTanggal;
     }
 }

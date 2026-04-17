@@ -13,6 +13,9 @@ namespace Sistem_pelaporan_keracunan_MBG
 {
     public partial class Form2 : Form
     {
+        public static string lokasiKejadian = "";
+        public static DateTime tanggalKejadian;
+
         private readonly SqlConnection conn;
         private readonly string connectionString =
             "Data Source=TERABYTE\\SYAHJEHAN00;Initial Catalog=Sistem_Pelaporan_Keracunan_MBG;Integrated Security=True";
@@ -28,6 +31,9 @@ namespace Sistem_pelaporan_keracunan_MBG
 
         private void button1_Click(object sender, EventArgs e)
         {
+            lokasiKejadian = txtBoxLokasi.Text;
+            tanggalKejadian = dtpTanggal.Value;
+
             if (string.IsNullOrWhiteSpace(txtBoxLokasi.Text))
             {
                 MessageBox.Show("Lokasi Harus diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -43,6 +49,11 @@ namespace Sistem_pelaporan_keracunan_MBG
             Form1 formAwal = (Form1)Application.OpenForms["Form1"];
             formAwal.Show();
             this.Hide();
+        }
+
+        private void dtpTanggal_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

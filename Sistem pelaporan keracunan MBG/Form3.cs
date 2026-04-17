@@ -28,7 +28,15 @@ namespace Sistem_pelaporan_keracunan_MBG
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
+            if (string.IsNullOrWhiteSpace(txtGejala.Text) || string.IsNullOrWhiteSpace(txtKorban.Text))
+            {
+                MessageBox.Show("Deskripsi Gejala dan Jumlah Korban wajib diisiD!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string connString = @"Data Source=TERABYTE\SYAHJEHAN00;Initial Catalog=Sistem_Pelaporan_Keracunan_MBG;Integrated Security=True";
+
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

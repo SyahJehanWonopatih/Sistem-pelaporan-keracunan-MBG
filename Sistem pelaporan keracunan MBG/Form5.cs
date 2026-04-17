@@ -99,6 +99,7 @@ namespace Sistem_pelaporan_keracunan_MBG
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("Laporan Berhasil Divalidasi!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDataLaporan();
                         }
                     }
                     catch (Exception ex)

@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnTerima = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,12 +90,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnTerima
+            // 
+            this.btnTerima.BackColor = System.Drawing.Color.Silver;
+            this.btnTerima.Location = new System.Drawing.Point(565, 230);
+            this.btnTerima.Name = "btnTerima";
+            this.btnTerima.Size = new System.Drawing.Size(107, 23);
+            this.btnTerima.TabIndex = 33;
+            this.btnTerima.Text = "Terima Laporan";
+            this.btnTerima.UseVisualStyleBackColor = false;
+            this.btnTerima.Click += new System.EventHandler(this.btnTerima_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(684, 478);
+            this.Controls.Add(this.btnTerima);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label1);
@@ -115,5 +128,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTerima;
     }
 }

@@ -67,5 +67,45 @@ namespace Sistem_pelaporan_keracunan_MBG
                 MessageBox.Show("Koneksi Gagal!: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnTerima_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string idLaporan = dataGridView1.SelectedRows[0].Cells["id_laporan"].Value.ToString();
+
+                DialogResult dr = MessageBox.Show("Validasi laporan dengan ID " + idLaporan + " ini?",
+                                  "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dr == DialogResult.Yes)
+                {
+                    string connString = @"Data Source=TERABYTE\SYAHJEHAN00;Initial Catalog=Sistem_Pelaporan_Keracunan_MBG;Integrated Security=True";
+
+                    try
+                    {
+                        using (SqlConnection conn = new SqlConnection(connString))
+                        {
+                            conn.Open();
+                            string query = "UPDATE Laporan SET status_validasi = 'Diterima' WHERE id_laporan = @id";
+
+                            SqlCommand cmd = new SqlCommand(query, conn);
+                            cmd.Parameters.AddWithValue("@id", idLaporan);
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Laporan Berhasil Divalidasi!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Gagal update data: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih dulu baris laporan yang mau diterima di tabel!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

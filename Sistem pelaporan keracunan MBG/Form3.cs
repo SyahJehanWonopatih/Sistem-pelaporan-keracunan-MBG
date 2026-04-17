@@ -36,7 +36,49 @@ namespace Sistem_pelaporan_keracunan_MBG
 
             string connString = @"Data Source=TERABYTE\SYAHJEHAN00;Initial Catalog=Sistem_Pelaporan_Keracunan_MBG;Integrated Security=True";
 
-            
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connString))
+                {
+                    conn.Open();
+
+                    string queryMasyarakat = @"
+                INSERT INTO Masyarakat (nama_pelapor, kontak, alamat, kota_kab) 
+                OUTPUT INSERTED.id_masyarakat 
+                VALUES (@nama, @kontak, @alamat, @kota)";
+
+                    SqlCommand cmdMasy = new SqlCommand(queryMasyarakat, conn);
+                    cmdMasy.Parameters.AddWithValue("@nama", Form1.namaLengkap);
+                    cmdMasy.Parameters.AddWithValue("@kontak", Form1.noKontak);
+                    cmdMasy.Parameters.AddWithValue("@alamat", Form2.lokasiKejadian);
+                    cmdMasy.Parameters.AddWithValue("@kota", Form1.kotaKab);
+
+                    int newIdMasy = (int)cmdMasy.ExecuteScalar();
+
+                    string queryLaporan = @"
+                INSERT INTO Laporan (id_masyarakat, lokasi_kejadian, tanggal, jumlah_korban, gejala) 
+                VALUES (@idMasy, @lokasi, @tgl, @korban, @gejala)";
+
+                    SqlCommand cmdLap = new SqlCommand(queryLaporan, conn);
+                    cmdLap.Parameters.AddWithValue("@idMasy", newIdMasy);
+                    cmdLap.Parameters.AddWithValue("@lokasi", Form2.lokasiKejadian);
+                    cmdLap.Parameters.AddWithValue("@tgl", Form2.tanggalKejadian);
+                    cmdLap.Parameters.AddWithValue("@korban", int.Parse(txtKorban.Text));
+                    cmdLap.Parameters.AddWithValue("@gejala", txtGejala.Text);
+
+                    cmdLap.ExecuteNonQuery(); 
+
+                    MessageBox.Show("Laporan berhasil dikirim!.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Form1 formAwal = (Form1)Application.OpenForms["Form1"];
+                    formAwal.Show();
+                    this.Close(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unknown Error: " + ex.Message, "Error Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
